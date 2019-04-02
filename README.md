@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Research rapport
 
 ## Controlling Diddyborg v2 with a Wiimote - Jeroen Vervaeck en Yoram Platteeuw
@@ -570,12 +569,3 @@ Now the program will execute without entering a screen first.
 
 [https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/](https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/)
 
-=======
-# labo-4-diddyborg
-Jeroen Vervaeck, Yoram Platteeuw
-
-## Examples
-### Move DiddyBorg 
-### Control LED     (unfinished)
-### Use webcam      (unfinished)
->>>>>>> 824b0a63d4c3a3d1d459be149b39818a06d3ca18
