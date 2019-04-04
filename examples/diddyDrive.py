@@ -9,16 +9,6 @@ import time
 #import evdev
 from evdev import InputDevice, categorize, ecodes
 
-# import camera
-from time import sleep
-from picamera import PiCamera
-# initialize camera
-camera = PiCamera()
-camera.resolution = (1024, 768)
-# camera preview
-camera.start_preview()
-# Camera warm-up time
-sleep(2)
 
 
 
@@ -44,31 +34,14 @@ while wait:
 print(gamepad)
 
 # Wii keys
-# Driving
+
 up = 103
 down = 108
 left = 105
 right = 106
 stop = 304
 
-# Leds
-green = 257
-red = 258
-police = 316
 
-# Camera
-photo = 305
-
-picPath = "./diddy-pictures/"
-picName = "spy"
-picCount = 1
-
-picExtension = ".jpg"
-
-
-
-	
-	
    
 for event in gamepad.read_loop():
     if event.type == ecodes.EV_KEY:
@@ -89,21 +62,5 @@ for event in gamepad.read_loop():
                 TB.SetMotor2(-0.5)
             elif event.code == stop:
 				TB.MotorsOff()
-				
-	if event.type == ecodes.EV_KEY:
-		if event.value == 1:
-			if event.code == green:
-				TB.SetLeds(0, 255, 0)
-			elif event.code == red:
-				TB.SetLeds(255, 0, 0)
-			elif event.code == police:
-				setPolice(True) 
-			elif event.code == photo:
-				camera.capture(picPath + picName + str(picCount) +picExtension)
-				if picCount == 5:
-					picCount = 1
-				elif picCount != 5:
-					picCount = picCount + 1
-				
 
 
